@@ -1,25 +1,57 @@
-import java.util.ArrayList;
+package entities;
 
-class ArrayListExample{
+import java.util.ArrayList;
+import java.util.List;
+
+class ArrayListExample {
 
     // Define the following methods.  No casts allowed!
 
     // total_area -- takes a list of 2-d shapes and calculates the total
-    // area of those shapes 
+    // area of those shapes
+    public static double total_area(List<? extends TwoDShape> list) {
+        double area = 0d;
+        for (TwoDShape shape : list) {
+            area += shape.area();
+
+        }
+        return area;
+    }
 
     // total_perimeter -- takes a list of rectangles and calculates the
     // total perimeter
+    public static double total_perimeter(List<Rectangle> rectangles){
+        double perimeter = 0;
+        for (Rectangle rectangle: rectangles) {
+            perimeter += rectangle.perimeter();
+
+        }
+        return perimeter;
+    }
 
     // describe_all -- takes a list of geometric shapes and invokes the
     // 'describe' method on each of them, then prints out the total number
     // of shapes
+    public static void describe_all(List<?> geometricShapes){
+         describe_all(geometricShapes);
+    }
 
     // add_empties  -- takes a list of geometric shapes and adds 
     // the following objects to it: 
-    //  new Circle(0.0)
-    //  new Cone(0.0,0.0)
-    //  new Rectangle(0.0,0.0)
-    //  new Sphere(0.0)
+    //  new entities.Circle(0.0)
+    //
+    //  new entities.Rectangle(0.0,0.0)
+    //  new entities.Sphere(0.0)
+    public static void add_empties(List<GeometricShape> geometricShapes){
+        geometricShapes.add(new entities.Circle(0.0));
+        geometricShapes.add(new entities.Cone(0.0,0.0));
+        geometricShapes.add(new entities.Rectangle(0.0,0.0));
+        geometricShapes.add(new entities.Sphere(0.0));
+
+    }
+
+
+
 
 
     // leave this main method as is:
@@ -74,11 +106,11 @@ class ArrayListExample{
         // Extra credit part: supersize different kinds of lists of shapes
 //         System.out.println();
 //         System.out.println("supersizing a list of rectangles");
-//         ArrayList<Rectangle> double_rects = supersized_list(rects);
+//         ArrayList<entities.Rectangle> double_rects = supersized_list(rects);
 //         describe_all(double_rects);
 //         System.out.println();
 //         System.out.println("supersizing a list of spheres");
-//         ArrayList<Sphere> double_spheres = supersized_list(spheres);
+//         ArrayList<entities.Sphere> double_spheres = supersized_list(spheres);
 //         describe_all(double_spheres);
     }
 }

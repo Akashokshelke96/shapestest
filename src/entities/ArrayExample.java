@@ -1,4 +1,4 @@
-// You should add statements to this code as needed, so that
+package entities;// You should add statements to this code as needed, so that
 // the code compiles correctly, and when it is run, it raises
 // a java.lang.ArrayStoreException when adding the cone to geoshapes.
 // (Adding the circle should be OK.)

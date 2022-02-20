@@ -1,3 +1,5 @@
+package entities;
+
 public class Circle implements TwoDShape  {
     private double radius;
 
@@ -16,7 +18,7 @@ public class Circle implements TwoDShape  {
     }
 
     public void describe() {
-        System.out.print("Circle[radius=");
+        System.out.print("entities.Circle[radius=");
         System.out.print(radius);
         System.out.println("]");
     }
