@@ -1,3 +1,5 @@
+package entities;
+
 public class Rectangle implements TwoDShape  {
     private double width, height;
 
@@ -15,7 +17,7 @@ public class Rectangle implements TwoDShape  {
     }
 
     public void describe() {
-        System.out.print("Rectangle[width=");
+        System.out.print("entities.Rectangle[width=");
         System.out.print(width);
         System.out.print(",height=");
         System.out.print(height);

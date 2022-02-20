@@ -1,3 +1,5 @@
+package entities;
+
 public class Cone implements ThreeDShape  {
     private double radius;
     private double height;
@@ -13,7 +15,7 @@ public class Cone implements ThreeDShape  {
     }
 
     public void describe() {
-        System.out.print("Cone[radius=");
+        System.out.print("entities.Cone[radius=");
         System.out.print(radius);
         System.out.print(",height=");
         System.out.print(height);
